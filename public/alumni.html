@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/webp" href="../assets/labels/Logo.webp">
+    <title>Alumni</title>
+    <link rel="stylesheet" href="../styles/alumni.css">
+    <script src="../scripts/alumni.js" ></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a id="active">Alumni</a></li> <!-- Highlights the active page. -->
+            <li><a class="not-active" href="../public/instructors.html">Our Instructors</a></li>
+            <li><a class="not-active" href="../public/contact.html" target="_blank">Contact Us</a></li> <!-- target blank ensures that the contact us page laod in a new tab in a browser -->
+        </ul>
+        <div class="dropdown">
+            <button>CodeNest</button>   
+            <div class="content">
+                <a class="not-active" href="../public/index.html">Home</a>
+                <a class="not-active" href="../public/about.html">About Us</a>
+                <a class="not-active" href="../public/course-catalog.html" title="View our Courses Catalog">Courses Catalog</a>
+                <a class="not-active" href="../public/course-details.html">Courses Details</a>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1>What our Alumni think?</h1>
+    </header>
+    <main>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <p class="review-text">"The Web Development course gave me a solid foundation to build my portfolio."</p>
+                    <p class="reviewer">- Mark Johnson, Web Full-Stack Development</p>
+                </div>
+                <div class="slide">
+                    <p class="review-text">"The Android Development course helped me create my first mobile app."</p>
+                    <p class="reviewer">- Priya Patel, Android Development</p>
+                </div>
+                <div class="slide">
+                    <p class="review-text">"The Cybersecurity course gave me the confidence to secure systems effectively, and I landed a
+                       role as a junior security analyst right after graduation."</p>
+                    <p class="reviewer">-  Sophia Blake, Cybersecurity</p>
+                </div>
+                <div class="slide">
+                    <p class="review-text">"Thanks to the iOS course, I successfully published my first app on the App Store."</p>
+                    <p class="reviewer">- Liam Turner, iOS Development</p>
+                </div>
+                <div class="slide">
+                    <p class="review-text">"The Data Science program taught me how to work with real-world data and implement machine
+                       learning models. I'm now excelling in my role as a data analyst at a top firm."</p>
+                    <p class="reviewer">- - Ahmed Khan, Data Science</p>
+                </div>
+                <div class="slide">
+                    <p class="review-text">"The Game Development course was hands-on and inspiring. I developed my first 2D game, which is
+                       now live on an indie gaming platform!"</p>
+                    <p class="reviewer">- - Emily Carter, Game Development</p>
+                </div>
+            </div>
+        </div>
+        
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 CodeNest. All rights reserved.</p>
+    </footer>
+</body>
+</html>
