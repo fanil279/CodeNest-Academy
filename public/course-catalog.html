@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/webp" href="../assets/labels/Logo.webp">
+    <title>Our Courses</title>
+    <link rel="stylesheet" href="../styles/course-catalog.css">
+    <script src="../scripts/course-catalog.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a id="active">Courses Catalog</a></li> <!-- Highlights the active page. -->
+            <li><a class="not-active" href="../public/instructors.html">Our Instructors</a></li>
+            <li><a class="not-active" href="../public/contact.html" target="_blank">Contact Us</a></li> <!-- target blank ensures that the contact us page laod in a new tab in a browser -->
+        </ul>
+        <div class="dropdown">
+            <button>CodeNest</button>
+            <div class="content">
+                <a class="not-active" href="../public/index.html">Home</a>
+                <a class="not-active" href="../public/about.html">About Us</a>
+                <a class="not-active" href="../public/course-details.html">Courses Details</a>
+                <a class="not-active" href="../public/alumni.html">Alumni</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Title and Description -->
+    <section id="catalog-intro">
+        <h2>Explore Our Courses</h2>
+        <p>
+            Discover a wide range of IT courses tailored for learners of all levels. From programming fundamentals to advanced cybersecurity, our expertly designed courses will help you gain the skills needed to succeed in the tech industry.
+        </p>
+    </section>
+    <!-- Filtering and Course List -->
+    <main>
+        <section>
+            <label for="category">Filter by Category:</label>
+            <select id="category" name="courses">
+                <option value="all">All</option>
+                <option value="web-full-stack-development">Web Full-Stack Development</option>
+                <option value="android-development">Android Development</option>
+                <option value="ios-development">IOS Development</option>
+                <option value="game-development">Game Development</option>
+                <option value="data-science">Data Science</option>
+                <option value="cybersecurity">Cybersecurity</option>
+            </select>
+        </section>
+        
+        <section id="course-list" class="course-list">
+            <!-- Courses will be dynamically generated here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CodeNest. All rights reserved.</p>
+        <p>Follow us: 
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>
