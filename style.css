@@ -1,0 +1,466 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif, serif;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/images/computer-science-ms.jpg);
+    background-size: cover; /* Ensures the image covers the entire header area */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 140px;
+    width: 100vw;
+}
+
+#Logo {
+    width: 140px;
+    padding: 10px;
+    border-radius: 25px;
+    z-index: 1; /* Ensures the logo is above other elements */
+}
+
+nav {
+    position: sticky; /* Keeps the nav bar fixed at the top when scrolling */
+    top: 0; /* Specifies the top position for nav to stick to */
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10; /* Makes sure the nav is on top of other elements */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    color: white;
+    font-size: 1.2rem;
+}
+nav ul li {
+    margin: 50px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+nav .not-active:hover {
+    background-color: #FF6B01; 
+    border-radius: 50px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative; /* Sets the dropdown position relative to its container */
+}
+
+#active {
+    background-color: #6552D0;
+}
+
+.dropdown button {
+    background-color: #FF6B01;
+    color: white;
+    padding: 14px 14px;
+    border: none;
+    border-radius: 0%;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.dropdown .content {
+    display: none; /* Hides the dropdown content initially */
+    position: absolute; /* Positions the dropdown menu below the button */
+    background-color: hsl(0, 0%, 95%);
+    min-height: 126px;
+    min-width: 235px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.dropdown:hover .content {
+    display: block; /* Shows the dropdown menu when hovering over the button */
+}
+
+.dropdown:hover button {
+    background-color: hsl(33, 77%, 60%);
+}
+
+.dropdown a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-top: 2px;
+}
+
+.dropdown a:hover {
+    background-color: #FF6B01;
+    color: white;
+}
+
+#featured-courses {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    text-align: center;
+    background: linear-gradient(180deg, #6552D0 50%, #FF6B01 100%); /* Smooth color gradient background */
+}
+
+#featured-courses h1 {
+    position: absolute;
+    top: 29%;
+    font-size: xx-large;
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Makes button grow slightly on hover */
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover {
+    box-shadow: 1px 1px 1px 1px white
+}
+
+figcaption {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+figure:hover {
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px #17203D;
+}
+
+figure * {
+    padding: 5px;
+}
+
+figure img, button {
+    border-radius: 10px;
+}
+
+.dev {
+    margin-top: 50px;
+}
+
+.dev img {
+    width: 300px;
+    height: 250px;
+}
+
+.btn::before {
+    content: '→';
+    margin-right: 5px;
+    color: white;
+}
+
+#why-choose-us {
+    padding: 50px 20px;
+    background-color: #121212; /* Dark background */
+    color: white;
+    text-align: center;
+}
+
+#why-choose-us h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #FF6B01;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#why-choose-us > h1 {
+    padding-bottom: 50px;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 350px;
+    width: calc(33.33% - 40px); /* Takes up 1/3 of the container's width */
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+}
+
+.info:hover {
+    transform: translateY(-10px); /* Makes box move upward when hovered */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.info p {
+    font-size: 1rem;
+    color: #d3d3d3;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #6552D0;
+}
+
+@media screen and (max-width: 600px) {
+
+    header {
+        height: 100px; /* Reduces height for smaller screens */
+        flex-direction: column; /* Stacks header items vertically */
+        padding: 10px;
+    }
+
+    #Logo {
+        width: 100px;
+    }
+
+    nav {
+        height: auto;
+        width: auto;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav > ul > li {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        margin: 0;
+    }
+
+    nav a, .dropdown button {
+        width: 100%;
+        text-align: center;
+        padding: 17px;
+        border-top: 1px solid white;
+    }
+
+    .dropdown .content {
+        position: static;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        padding: 5px 0;
+    }
+
+    .dropdown a {
+        color: white;
+        padding: 10px 0;
+        background-color: black;
+        text-align: center;
+    }
+
+    #featured-courses {
+        flex-direction: column; /* Stacks items vertically on smaller screens */
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        height: auto; /* Adjust height to fit content */
+        background: linear-gradient(90deg, #6552D0 50%, #FF6B01 100%);
+    }
+
+    .info {
+        flex: 1;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: end;
+        align-items: stretch;
+        height: auto;  /* Adjusts height based on content */
+        width: auto; /* Adjusts width to fill available space */
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: stretch;
+        height: auto;
+    }
+
+    footer p {
+        text-align: center;
+        font-size: 0.8rem;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    header {
+        height: 120px; /* Reduces height slightly for tablet screens */
+        flex-direction: column; /* Stacks items vertically */
+        padding: 15px;
+    }
+
+    #Logo {
+        width: 120px; /* Reduces logo size for tablets */
+    }
+
+    nav {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 10px;
+    }
+
+    nav > ul > li {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 0;
+    }
+
+    nav a, .dropdown button {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid white;
+    }
+
+    .dropdown .content {
+        position: static;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        padding: 5px 0;
+    }
+
+    .dropdown a {
+        color: white;
+        padding: 10px 0;
+        background-color: black;
+        text-align: center;
+    }
+
+    #featured-courses {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: auto;
+        background: linear-gradient(90deg, #6552D0 50%, #FF6B01 100%);
+    }
+
+    .dev {
+        margin-top: 30px;
+    }
+
+    .dev img {
+        width: 250px; /* Adjust image size for tablets */
+        height: 200px;
+    }
+
+    .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .info {
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        margin: 10px;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        height: auto;  /* Adjusts height for smaller screens */
+        width: calc(50% - 40px); /* Adjust width to take up 50% of the container */
+        text-align: center;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info:hover {
+        transform: translateY(-10px);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    footer {
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: stretch;
+        height: auto;
+    }
+
+    footer p {
+        text-align: center;
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    #why-choose-us {
+        padding: 40px 20px;
+    }
+
+    #why-choose-us h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .info p {
+        font-size: 1rem;
+        color: #d3d3d3;
+        line-height: 1.5;
+        flex-grow: 1;
+    }
+}
