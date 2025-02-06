@@ -60,9 +60,11 @@ nav ul {
     color: white;
     font-size: 1.2rem;
 }
+
 nav ul li {
     margin: 80px;
 }
+
 nav a {
     text-decoration: none;
     color: white;
@@ -223,30 +225,22 @@ p {
     font-weight: bold;
     font-size: medium;
     line-height: 3.5rem;
-    top: 147rem;
+    top: 146rem;
     left: 25rem;
 }
 
 footer {
     height: 50px;
-    background-color: #6552D0;
-    color: white;
-    text-align: center;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #6552D0;
 }
-footer p {
-    color: white;
-    position: absolute;
-    top: 173.3rem;
-    left: 37rem;
-    font-size: medium;
-    
-}
+
 footer a {
     text-decoration: none;
     color: white;
     font-size: large;
-    float: left;
 }
 
 @media screen and (max-width: 600px) {
@@ -256,23 +250,27 @@ footer a {
     }
 
     header {
+        display: none;
+    }
+
+    nav {
         flex-direction: column;
         height: auto;
         padding: 10px;
     }
 
-    header a {
-        font-size: 0.9rem;
-        margin: 5px;
-    }
-
     nav ul {
+        flex-direction: column;
         align-items: center;
-        font-size: 0.9rem;
     }
 
     nav ul li {
         margin: 10px 0;
+    }
+
+    nav .not-active:hover {
+        background-color: unset;
+        color: #FF6B01;
     }
 
     nav .dropdown button {

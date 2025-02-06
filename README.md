@@ -11,3 +11,6 @@ The website includes seven essential pages to guide users through their learning
 7 - About Us - Information about the platform’s mission, history, and team.
 
 CodeNest is designed with a clean, responsive layout and interactive features, ensuring a seamless experience across all devices. It was created to fulfill the Web Technology module’s requirements and does not represent an actual company or service.
+
+Link to a hosted website!
+https://00018993.github.io/CodeNest-Academy.org/

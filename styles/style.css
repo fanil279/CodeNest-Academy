@@ -1,3 +1,4 @@
+/* General styles */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -15,7 +16,7 @@ header {
     justify-content: center;
     align-items: center;
     background-image: url(../assets/images/computer-science-ms.jpg);
-    background-size: cover; /* Ensures the image covers the entire header area */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 140px;
@@ -26,20 +27,19 @@ header {
     width: 140px;
     padding: 10px;
     border-radius: 25px;
-    z-index: 1; /* Ensures the logo is above other elements */
+    z-index: 1;
 }
 
 nav {
-    position: sticky; /* Keeps the nav bar fixed at the top when scrolling */
-    top: 0; /* Specifies the top position for nav to stick to */
+    position: sticky;
+    top: 0;
     background-color: black;
     height: 50px;
     width: 100%;
     display: flex;
-    flex: 1;
     justify-content: space-around;
     align-items: center;
-    z-index: 10; /* Makes sure the nav is on top of other elements */
+    z-index: 10;
 }
 
 nav ul {
@@ -47,10 +47,16 @@ nav ul {
     list-style-type: none;
     color: white;
     font-size: 1.2rem;
+    padding-left: 0;
 }
+
 nav ul li {
-    margin: 50px;
+    margin: 0;
+    white-space: nowrap;  /* Prevent wrapping of text in tabs */
+    overflow: hidden;     /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
+
 nav a {
     text-decoration: none;
     color: white;
@@ -58,13 +64,13 @@ nav a {
 }
 
 nav .not-active:hover {
-    background-color: #FF6B01; 
+    background-color: #FF6B01;
     border-radius: 50px;
 }
 
 .dropdown {
     display: inline-block;
-    position: relative; /* Sets the dropdown position relative to its container */
+    position: relative;
 }
 
 #active {
@@ -82,8 +88,8 @@ nav .not-active:hover {
 }
 
 .dropdown .content {
-    display: none; /* Hides the dropdown content initially */
-    position: absolute; /* Positions the dropdown menu below the button */
+    display: none;
+    position: absolute;
     background-color: hsl(0, 0%, 95%);
     min-height: 126px;
     min-width: 235px;
@@ -91,7 +97,7 @@ nav .not-active:hover {
 }
 
 .dropdown:hover .content {
-    display: block; /* Shows the dropdown menu when hovering over the button */
+    display: block;
 }
 
 .dropdown:hover button {
@@ -111,19 +117,19 @@ nav .not-active:hover {
     color: white;
 }
 
+/* Featured courses */
 #featured-courses {
     display: flex;
-    flex: 1;
     justify-content: space-around;
     align-items: center;
     height: 650px;
     text-align: center;
-    background: linear-gradient(180deg, #6552D0 50%, #FF6B01 100%); /* Smooth color gradient background */
+    background: linear-gradient(180deg, #6552D0 50%, #FF6B01 100%);
 }
 
 #featured-courses h1 {
     position: absolute;
-    top: 29%;
+    top: 30vh;
     font-size: xx-large;
     text-transform: uppercase;
 }
@@ -140,7 +146,7 @@ nav .not-active:hover {
 }
 
 .btn:hover {
-    transform: scale(1.1); /* Makes button grow slightly on hover */
+    transform: scale(1.1);
 }
 
 button a {
@@ -149,7 +155,7 @@ button a {
 }
 
 .btn:hover {
-    box-shadow: 1px 1px 1px 1px white
+    box-shadow: 1px 1px 1px 1px white;
 }
 
 figcaption {
@@ -188,7 +194,7 @@ figure img, button {
 
 #why-choose-us {
     padding: 50px 20px;
-    background-color: #121212; /* Dark background */
+    background-color: #121212;
     color: white;
     text-align: center;
 }
@@ -224,15 +230,15 @@ figure img, button {
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     height: 350px;
-    width: calc(33.33% - 40px); /* Takes up 1/3 of the container's width */
+    width: calc(33.33% - 40px);
     text-align: center;
     box-sizing: border-box;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .info:hover {
-    transform: translateY(-10px); /* Makes box move upward when hovered */
+    transform: translateY(-10px);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
 }
 
@@ -241,6 +247,9 @@ figure img, button {
     color: #d3d3d3;
     line-height: 1.5;
     flex-grow: 1;
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
 }
 
 footer {
@@ -251,11 +260,11 @@ footer {
     background-color: #6552D0;
 }
 
+/* Mobile view */
 @media screen and (max-width: 600px) {
-
     header {
-        height: 100px; /* Reduces height for smaller screens */
-        flex-direction: column; /* Stacks header items vertically */
+        height: 100px;
+        flex-direction: column;
         padding: 10px;
     }
 
@@ -303,24 +312,36 @@ footer {
     }
 
     #featured-courses {
-        flex-direction: column; /* Stacks items vertically on smaller screens */
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: stretch;
-        height: auto; /* Adjust height to fit content */
-        background: linear-gradient(90deg, #6552D0 50%, #FF6B01 100%);
+        height: auto;
     }
-
+    
     .info {
-        flex: 1;
+        display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: end;
-        align-items: stretch;
-        height: auto;  /* Adjusts height based on content */
-        width: auto; /* Adjusts width to fill available space */
-        flex-grow: 1;
-        flex-shrink: 1;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        margin: 10px;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        height: auto;
+        width: calc(33.33% - 40px); /* Adjust width to take up 1/3 of the container */
+        text-align: center;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .info p, .info h1 {
+        font-size: smaller;
+        overflow-wrap: break-word; /* Ensures text will wrap */
+        word-wrap: break-word; /* Fallback for older browsers */
+        width: 100%;
     }
 
     footer {
@@ -335,18 +356,30 @@ footer {
         font-size: 0.8rem;
         margin: 5px 0;
     }
+
+    #why-choose-us .info {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
 }
 
+/* Tablet view */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-
     header {
-        height: 120px; /* Reduces height slightly for tablet screens */
-        flex-direction: column; /* Stacks items vertically */
+        height: 120px;
+        flex-direction: column;
         padding: 15px;
     }
 
     #Logo {
-        width: 120px; /* Reduces logo size for tablets */
+        width: 120px;
     }
 
     nav {
@@ -362,47 +395,17 @@ footer {
     }
 
     nav > ul > li {
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         margin: 0;
-    }
-
-    nav a, .dropdown button {
-        width: 100%;
-        text-align: center;
-        padding: 15px;
-        border-top: 1px solid white;
-    }
-
-    .dropdown .content {
-        position: static;
-        width: 100%;
-        background-color: rgb(0, 0, 0);
-        padding: 5px 0;
-    }
-
-    .dropdown a {
-        color: white;
-        padding: 10px 0;
-        background-color: black;
-        text-align: center;
     }
 
     #featured-courses {
         flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-around;
-        align-items: center;
+        align-items: stretch;
         height: auto;
-        background: linear-gradient(90deg, #6552D0 50%, #FF6B01 100%);
-    }
-
-    .dev {
-        margin-top: 30px;
-    }
-
-    .dev img {
-        width: 250px; /* Adjust image size for tablets */
-        height: 200px;
     }
 
     .info-container {
@@ -412,55 +415,32 @@ footer {
         gap: 20px;
     }
 
+    #why-choose-us .info {
+        width: calc(50% - 40px);
+    }
+
     .info {
-        flex: 1;
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 15px;
+        padding: 20px;
         margin: 10px;
         border: 1px solid white;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.1);
-        height: auto;  /* Adjusts height for smaller screens */
-        width: calc(50% - 40px); /* Adjust width to take up 50% of the container */
+        height: auto;
+        width: calc(33.33% - 40px); /* Adjust width to take up 1/3 of the container */
         text-align: center;
         box-sizing: border-box;
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .info:hover {
-        transform: translateY(-10px);
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
-    }
-
-    footer {
-        flex-wrap: wrap;
-        justify-content: start;
-        align-items: stretch;
-        height: auto;
-    }
-
-    footer p {
-        text-align: center;
-        font-size: 1rem;
-        margin: 5px 0;
-    }
-
-    #why-choose-us {
-        padding: 40px 20px;
-    }
-
-    #why-choose-us h1 {
-        font-size: 2rem;
-        margin-bottom: 30px;
-    }
-
-    .info p {
-        font-size: 1rem;
-        color: #d3d3d3;
-        line-height: 1.5;
-        flex-grow: 1;
+    .info p, .info h1 {
+        font-size: smaller;
+        overflow-wrap: break-word; /* Ensures text will wrap */
+        word-wrap: break-word; /* Fallback for older browsers */
+        width: 100%;
     }
 }
