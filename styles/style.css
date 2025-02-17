@@ -64,8 +64,7 @@ nav a {
 }
 
 nav .not-active:hover {
-    background-color: #FF6B01;
-    border-radius: 50px;
+    color: #FF6B01;
 }
 
 .dropdown {
